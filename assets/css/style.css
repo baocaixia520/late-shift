@@ -1361,3 +1361,115 @@ p:last-child { margin-bottom: 0; }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
 }
+
+/* ---------- client footer: four-column layout ---------- */
+.footer { background: #000; border-top: 0; }
+.footer-in { padding: 40px 0 30px; }
+.foot-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #202226;
+}
+.ft-brand .ft-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  color: #111;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  padding: 18px 26px;
+  min-width: 250px;
+  min-height: 72px;
+  margin-bottom: 20px;
+}
+.ft-brand .ft-logo img { max-width: 100%; height: auto; display: block; }
+.ft-intro p {
+  font-family: var(--serif);
+  font-size: 13px;
+  line-height: 1.65;
+  color: #b9bdc6;
+  margin: 0 0 14px;
+  max-width: 34ch;
+}
+.ft-subscribe {
+  position: relative;
+  background: #f3f3f3;
+  color: #17191d;
+  padding: 30px 20px 18px;
+  text-align: center;
+}
+.ft-sub-icon {
+  position: absolute;
+  top: -17px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ft-sub-icon svg { width: 18px; height: 18px; }
+.ft-subscribe h4 {
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: #17191d;
+  margin: 0 0 16px;
+}
+.ft-sub-form { display: grid; gap: 9px; }
+.ft-sub-form input {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #d7d9dc;
+  color: #17191d;
+  font-size: 13px;
+  padding: 11px 12px;
+}
+.ft-sub-form input::placeholder { color: #9a9ea6; }
+.ft-sub-form button {
+  width: 100%;
+  background: var(--accent);
+  color: #fff;
+  border: 0;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 12px;
+  cursor: pointer;
+}
+.ft-sub-form button:hover { background: var(--accent-dark); }
+.ft-sub-note { margin: 12px 0 0; font-size: 11px; color: #9a9ea6; }
+.ft-links h4 {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin: 4px 0 14px;
+}
+.ft-links li { margin-bottom: 9px; }
+.ft-links a { font-size: 12.5px; color: #b9bdc6; }
+.ft-links a:hover { color: #fff; }
+.footer-bottom { color: #7d838f; }
+
+@media (min-width: 768px) {
+  .foot-grid { grid-template-columns: 1.5fr 1.3fr; gap: 36px 30px; }
+}
+@media (min-width: 1024px) {
+  .foot-grid { grid-template-columns: 1.5fr 1.35fr 0.8fr 0.9fr; gap: 40px; align-items: start; }
+}
+
+/* ---------- client branding: white logo on dark masthead ---------- */
+.masthead { background: #000; border-bottom: 1px solid #202226; }
+.masthead-in { gap: 18px; }
+.brand .brand-logo { display: block; height: 38px; width: auto; }
+.brand-tag { color: #c7cad0; font-style: normal; }
+.ft-brand .ft-logo { background: transparent; padding: 0; min-width: 0; min-height: 0; margin-bottom: 18px; }
+.ft-brand .ft-logo img { display: block; height: 38px; width: auto; }
+@media (min-width: 768px) { .brand .brand-logo { height: 44px; } }
